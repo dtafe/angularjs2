@@ -6,5 +6,9 @@
   {
     "outputFile": "ClientApp/dist/css/style.css",
     "inputFile": "ClientApp/dist/css/style.less"
+  },
+  {
+    "outputFile": "ClientApp/app/components/navmenu/navmenu.component.css",
+    "inputFile": "ClientApp/app/components/navmenu/navmenu.component.less"
   }
 ]
