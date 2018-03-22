@@ -65,6 +65,14 @@ body {
     color: #333;
     border: 1px solid #ddd;
 }
-@media (min-width: 768px){
+@media screen and (min-width: 768px){
+    .carousel-control {
+        .glyphicon-chevron-left, .carousel-control .icon-prev {
+            margin: -15px 0 0 -15px;
+        }
 
+        .glyphicon-chevron-right, .carousel-control .icon-next {
+            margin: -15px -15px 0 0;
+        }
+    }
 }

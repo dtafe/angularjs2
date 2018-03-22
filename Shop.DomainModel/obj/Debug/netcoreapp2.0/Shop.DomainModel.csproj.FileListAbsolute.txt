@@ -1,0 +1,9 @@
+D:\angular2\project\shopping\Shop.DomainModel\bin\Debug\netcoreapp2.0\Shop.DomainModel.deps.json
+D:\angular2\project\shopping\Shop.DomainModel\bin\Debug\netcoreapp2.0\Shop.DomainModel.dll
+D:\angular2\project\shopping\Shop.DomainModel\bin\Debug\netcoreapp2.0\Shop.DomainModel.pdb
+D:\angular2\project\shopping\Shop.DomainModel\obj\Debug\netcoreapp2.0\Shop.DomainModel.csprojResolveAssemblyReference.cache
+D:\angular2\project\shopping\Shop.DomainModel\obj\Debug\netcoreapp2.0\Shop.DomainModel.csproj.CoreCompileInputs.cache
+D:\angular2\project\shopping\Shop.DomainModel\obj\Debug\netcoreapp2.0\Shop.DomainModel.AssemblyInfoInputs.cache
+D:\angular2\project\shopping\Shop.DomainModel\obj\Debug\netcoreapp2.0\Shop.DomainModel.AssemblyInfo.cs
+D:\angular2\project\shopping\Shop.DomainModel\obj\Debug\netcoreapp2.0\Shop.DomainModel.dll
+D:\angular2\project\shopping\Shop.DomainModel\obj\Debug\netcoreapp2.0\Shop.DomainModel.pdb

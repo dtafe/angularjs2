@@ -9,6 +9,7 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.6" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.3" />
   </ItemGroup>
 
   <ItemGroup>
@@ -30,6 +31,12 @@
     <None Include="wwwroot\dist\style.css" />
     <None Include="wwwroot\dist\style.less" />
     <None Include="wwwroot\dist\style.min.css" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Shop.DomainModel\Shop.DomainModel.csproj" />
+    <ProjectReference Include="..\Shop.Repositoties\Shop.Repositoties.csproj" />
+    <ProjectReference Include="..\Shop.Service.Api\Shop.Service.Api.csproj" />
   </ItemGroup>
 
   <Target Name="DebugRunWebpack" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('wwwroot\dist') ">

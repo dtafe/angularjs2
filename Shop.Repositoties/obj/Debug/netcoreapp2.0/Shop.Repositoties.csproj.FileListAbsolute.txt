@@ -1,0 +1,9 @@
+D:\angular2\project\shopping\Shop.Repositoties\bin\Debug\netcoreapp2.0\Shop.Repositoties.deps.json
+D:\angular2\project\shopping\Shop.Repositoties\bin\Debug\netcoreapp2.0\Shop.Repositoties.dll
+D:\angular2\project\shopping\Shop.Repositoties\bin\Debug\netcoreapp2.0\Shop.Repositoties.pdb
+D:\angular2\project\shopping\Shop.Repositoties\obj\Debug\netcoreapp2.0\Shop.Repositoties.csprojResolveAssemblyReference.cache
+D:\angular2\project\shopping\Shop.Repositoties\obj\Debug\netcoreapp2.0\Shop.Repositoties.csproj.CoreCompileInputs.cache
+D:\angular2\project\shopping\Shop.Repositoties\obj\Debug\netcoreapp2.0\Shop.Repositoties.AssemblyInfoInputs.cache
+D:\angular2\project\shopping\Shop.Repositoties\obj\Debug\netcoreapp2.0\Shop.Repositoties.AssemblyInfo.cs
+D:\angular2\project\shopping\Shop.Repositoties\obj\Debug\netcoreapp2.0\Shop.Repositoties.dll
+D:\angular2\project\shopping\Shop.Repositoties\obj\Debug\netcoreapp2.0\Shop.Repositoties.pdb
