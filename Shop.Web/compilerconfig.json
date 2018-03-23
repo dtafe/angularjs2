@@ -10,5 +10,33 @@
   {
     "outputFile": "ClientApp/app/components/navmenu/navmenu.component.css",
     "inputFile": "ClientApp/app/components/navmenu/navmenu.component.less"
+  },
+  {
+    "outputFile": "ClientApp/app/account/registration-form/registration-form.component.css",
+    "inputFile": "ClientApp/app/account/registration-form/registration-form.component.scss"
+  },
+  {
+    "outputFile": "ClientApp/app/account/login-form/login-form.component.css",
+    "inputFile": "ClientApp/app/account/login-form/login-form.component.scss"
+  },
+  {
+    "outputFile": "ClientApp/app/dashboard/root/root.component.css",
+    "inputFile": "ClientApp/app/dashboard/root/root.component.scss"
+  },
+  {
+    "outputFile": "ClientApp/app/spinner/spinner.component.css",
+    "inputFile": "ClientApp/app/spinner/spinner.component.scss"
+  },
+  {
+    "outputFile": "ClientApp/app/header/header.component.css",
+    "inputFile": "ClientApp/app/header/header.component.scss"
+  },
+  {
+    "outputFile": "ClientApp/app/dashboard/settings/settings.component.css",
+    "inputFile": "ClientApp/app/dashboard/settings/settings.component.scss"
+  },
+  {
+    "outputFile": "ClientApp/app/account/facebook-login/facebook-login.component.css",
+    "inputFile": "ClientApp/app/account/facebook-login/facebook-login.component.scss"
   }
 ]

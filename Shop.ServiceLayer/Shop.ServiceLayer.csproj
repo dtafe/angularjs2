@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="5.2.1" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="5.2.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Shop.DomainModel\Shop.DomainModel.csproj" />
+    <ProjectReference Include="..\Shop.Helpers\Shop.Helpers.csproj" />
+    <ProjectReference Include="..\Shop.ServiceLayer.Interface\Shop.ServiceLayer.Interface.csproj" />
+  </ItemGroup>
+
+</Project>

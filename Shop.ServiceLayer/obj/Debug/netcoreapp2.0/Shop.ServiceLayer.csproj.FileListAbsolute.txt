@@ -1,0 +1,16 @@
+D:\angular2\project\shopping\Shop.ServiceLayer\bin\Debug\netcoreapp2.0\Shop.ServiceLayer.deps.json
+D:\angular2\project\shopping\Shop.ServiceLayer\bin\Debug\netcoreapp2.0\Shop.ServiceLayer.dll
+D:\angular2\project\shopping\Shop.ServiceLayer\bin\Debug\netcoreapp2.0\Shop.ServiceLayer.pdb
+D:\angular2\project\shopping\Shop.ServiceLayer\bin\Debug\netcoreapp2.0\Shop.DomainModel.dll
+D:\angular2\project\shopping\Shop.ServiceLayer\bin\Debug\netcoreapp2.0\Shop.Helpers.dll
+D:\angular2\project\shopping\Shop.ServiceLayer\bin\Debug\netcoreapp2.0\Shop.ServiceLayer.Interface.dll
+D:\angular2\project\shopping\Shop.ServiceLayer\bin\Debug\netcoreapp2.0\Shop.DomainModel.pdb
+D:\angular2\project\shopping\Shop.ServiceLayer\bin\Debug\netcoreapp2.0\Shop.Helpers.pdb
+D:\angular2\project\shopping\Shop.ServiceLayer\bin\Debug\netcoreapp2.0\Shop.ServiceLayer.Interface.pdb
+D:\angular2\project\shopping\Shop.ServiceLayer\obj\Debug\netcoreapp2.0\Shop.ServiceLayer.csprojResolveAssemblyReference.cache
+D:\angular2\project\shopping\Shop.ServiceLayer\obj\Debug\netcoreapp2.0\Shop.ServiceLayer.csproj.CoreCompileInputs.cache
+D:\angular2\project\shopping\Shop.ServiceLayer\obj\Debug\netcoreapp2.0\Shop.ServiceLayer.AssemblyInfoInputs.cache
+D:\angular2\project\shopping\Shop.ServiceLayer\obj\Debug\netcoreapp2.0\Shop.ServiceLayer.AssemblyInfo.cs
+D:\angular2\project\shopping\Shop.ServiceLayer\obj\Debug\netcoreapp2.0\Shop.ServiceLayer.csproj.CopyComplete
+D:\angular2\project\shopping\Shop.ServiceLayer\obj\Debug\netcoreapp2.0\Shop.ServiceLayer.dll
+D:\angular2\project\shopping\Shop.ServiceLayer\obj\Debug\netcoreapp2.0\Shop.ServiceLayer.pdb
