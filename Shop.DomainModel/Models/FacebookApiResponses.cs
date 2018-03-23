@@ -4,7 +4,7 @@ namespace Shop.DomainModel.Models
 {
     public class FacebookApiResponses
     {
-        internal class FacebookUserData
+        public class FacebookUserData
         {
             public long Id { get; set; }
             public string Email { get; set; }
@@ -18,12 +18,12 @@ namespace Shop.DomainModel.Models
             public FacebookPictureData Picture { get; set; }
         }
 
-        internal class FacebookPictureData
+        public class FacebookPictureData
         {
             public FacebookPicture Data { get; set; }
         }
 
-        internal class FacebookPicture
+        public class FacebookPicture
         {
             public int Height { get; set; }
             public int Width { get; set; }
@@ -32,7 +32,7 @@ namespace Shop.DomainModel.Models
             public string Url { get; set; }
         }
 
-        internal class FacebookUserAccessTokenData
+        public class FacebookUserAccessTokenData
         {
             [JsonProperty("app_id")]
             public long AppId { get; set; }
@@ -46,12 +46,12 @@ namespace Shop.DomainModel.Models
             public long UserId { get; set; }
         }
 
-        internal class FacebookUserAccessTokenValidation
+        public class FacebookUserAccessTokenValidation
         {
             public FacebookUserAccessTokenData Data { get; set; }
         }
 
-        internal class FacebookAppAccessToken
+        public class FacebookAppAccessToken
         {
             [JsonProperty("token_type")]
             public string TokenType { get; set; }
