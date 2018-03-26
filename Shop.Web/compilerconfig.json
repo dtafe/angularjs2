@@ -38,5 +38,21 @@
   {
     "outputFile": "ClientApp/app/account/facebook-login/facebook-login.component.css",
     "inputFile": "ClientApp/app/account/facebook-login/facebook-login.component.scss"
+  },
+  {
+    "outputFile": "ClientApp/app/components/dashboard/home/home.component.css",
+    "inputFile": "ClientApp/app/components/dashboard/home/home.component.scss"
+  },
+  {
+    "outputFile": "ClientApp/app/components/account/facebook-login/facebook-login.component.css",
+    "inputFile": "ClientApp/app/components/account/facebook-login/facebook-login.component.less"
+  },
+  {
+    "outputFile": "ClientApp/app/components/account/login-form/login-form.component.css",
+    "inputFile": "ClientApp/app/components/account/login-form/login-form.component.less"
+  },
+  {
+    "outputFile": "ClientApp/app/components/account/registration-form/registration-form.component.css",
+    "inputFile": "ClientApp/app/components/account/registration-form/registration-form.component.less"
   }
 ]

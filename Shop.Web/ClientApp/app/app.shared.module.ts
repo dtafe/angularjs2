@@ -9,7 +9,7 @@ import { NavMenuComponent } from './components/navmenu/navmenu.component';
 import { HomeComponent } from './components/home/home.component';
 import { FetchDataComponent } from './components/fetchdata/fetchdata.component';
 import { CounterComponent } from './components/counter/counter.component';
-
+import { routing } from './app.routing';
 import { ConfigService } from './shared/utils/config.service';
 import { AuthenticateXHRBackend } from './authenticate-xhr.backend';
 import { BrowserModule } from '@angular/platform-browser';
@@ -22,20 +22,21 @@ import { DashboardModule } from './dashboard/dashboard.module';
         NavMenuComponent,
         CounterComponent,
         FetchDataComponent,
-        HomeComponent,
-        //AccountModule,
-        //DashboardModule        
+        HomeComponent              
     ],
     imports: [
         CommonModule,
         HttpModule,
         FormsModule,
         BrowserModule,
+        AccountModule,
+        DashboardModule, 
+        routing,
         RouterModule.forRoot([
             { path: '', redirectTo: 'home', pathMatch: 'full' },
             { path: 'home', component: HomeComponent },
             { path: 'counter', component: CounterComponent },
-            { path: 'fetch-data', component: FetchDataComponent },
+            { path: 'fetch-data', component: FetchDataComponent },            
             { path: '**', redirectTo: 'home' }
         ])
     ],
