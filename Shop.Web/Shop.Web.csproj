@@ -23,25 +23,28 @@
 
   <ItemGroup>
     <!-- Files not to publish (note that the 'dist' subfolders are re-added below) -->
-    <Compile Remove="ClientApp\app\account\**" />
+    <Compile Remove="ClientApp\app\components\account\**" />
+    <Compile Remove="ClientApp\app\components\dashboard\**" />
+    <Compile Remove="ClientApp\app\components\shared\**" />
+    <Compile Remove="ClientApp\app\components\spinner\**" />
     <Compile Remove="ClientApp\app\dashboard\**" />
     <Compile Remove="ClientApp\app\header\**" />
     <Compile Remove="ClientApp\app\home\**" />
-    <Compile Remove="ClientApp\app\shared\**" />
-    <Compile Remove="ClientApp\app\spinner\**" />
     <Content Remove="ClientApp\**" />
-    <EmbeddedResource Remove="ClientApp\app\account\**" />
+    <EmbeddedResource Remove="ClientApp\app\components\account\**" />
+    <EmbeddedResource Remove="ClientApp\app\components\dashboard\**" />
+    <EmbeddedResource Remove="ClientApp\app\components\shared\**" />
+    <EmbeddedResource Remove="ClientApp\app\components\spinner\**" />
     <EmbeddedResource Remove="ClientApp\app\dashboard\**" />
     <EmbeddedResource Remove="ClientApp\app\header\**" />
     <EmbeddedResource Remove="ClientApp\app\home\**" />
-    <EmbeddedResource Remove="ClientApp\app\shared\**" />
-    <EmbeddedResource Remove="ClientApp\app\spinner\**" />
-    <None Remove="ClientApp\app\account\**" />
+    <None Remove="ClientApp\app\components\account\**" />
+    <None Remove="ClientApp\app\components\dashboard\**" />
+    <None Remove="ClientApp\app\components\shared\**" />
+    <None Remove="ClientApp\app\components\spinner\**" />
     <None Remove="ClientApp\app\dashboard\**" />
     <None Remove="ClientApp\app\header\**" />
     <None Remove="ClientApp\app\home\**" />
-    <None Remove="ClientApp\app\shared\**" />
-    <None Remove="ClientApp\app\spinner\**" />
   </ItemGroup>
 
   <ItemGroup>
@@ -69,6 +72,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="ClientApp\app\client-app\app\" />
     <Folder Include="Models\" />
   </ItemGroup>
 

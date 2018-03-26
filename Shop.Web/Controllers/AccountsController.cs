@@ -31,7 +31,16 @@ namespace Shop.Web.Controllers
                 return BadRequest(ModelState);
             }
 
-            var userIdentity = _mapper.Map<AppUser>(model);
+            //var userIdentity = _mapper.Map<AppUser>(model);
+            int index = model.Email.IndexOf("@");
+            var userIdentity = new AppUser
+            {
+                Email = model.Email,
+                FirstName = model.FirstName,
+                LastName = model.LastName,
+                Address = model.Location,
+                UserName = model.Email.Substring(0, index)
+            };
 
             var result = await _userManager.CreateAsync(userIdentity, model.Password);
 

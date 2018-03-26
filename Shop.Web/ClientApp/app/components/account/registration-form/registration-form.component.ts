@@ -25,7 +25,8 @@ export class RegistrationFormComponent implements OnInit {
   registerUser({ value, valid }: { value: UserRegistration, valid: boolean }) {
     this.submitted = true;
     this.isRequesting = true;
-    this.errors='';
+      this.errors = '';
+      debugger;
     if(valid)
     {
         this.userService.register(value.email,value.password,value.firstName,value.lastName,value.location)

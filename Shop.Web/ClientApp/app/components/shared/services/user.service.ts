@@ -10,7 +10,7 @@ import { Observable } from 'rxjs/Rx';
 import { BehaviorSubject } from 'rxjs/Rx'; 
 
 // Add the RxJS Observable operators we need in this app.
-import '../../rxjs-operators';
+import '../../../rxjs-operators';
 
 @Injectable()
 
