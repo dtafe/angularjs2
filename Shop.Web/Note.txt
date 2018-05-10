@@ -2,7 +2,10 @@
 follow: https://fullstackmark.com/post/13/jwt-authentication-with-aspnet-core-2-web-api-angular-5-net-core-identity-and-facebook-login
 Add migrations
 https://docs.microsoft.com/en-us/aspnet/core/data/ef-mvc/migrations
-cmd: dotnet ef migrations add InitialCreate
+cmd: Enable-Migrations
+	 Add-Migration _Name
+	 Update-Database | Update-Database –Verbose
+	 dotnet ef migrations add InitialCreate
      dotnet ef database update
 angular CLI: https://stackoverflow.com/questions/46826352/angular-cli-in-asp-net-core-2-angular-template
 Nuget:	Install-Package Microsoft.IdentityModel.Tokens -Version 5.2.1

@@ -1,7 +1,6 @@
 D:\angular2\project\shopping\Shop.Service.Api\bin\Debug\netcoreapp2.0\Shop.Service.Api.deps.json
 D:\angular2\project\shopping\Shop.Service.Api\bin\Debug\netcoreapp2.0\Shop.Service.Api.dll
 D:\angular2\project\shopping\Shop.Service.Api\bin\Debug\netcoreapp2.0\Shop.Service.Api.pdb
-D:\angular2\project\shopping\Shop.Service.Api\obj\Debug\netcoreapp2.0\Shop.Service.Api.csprojResolveAssemblyReference.cache
 D:\angular2\project\shopping\Shop.Service.Api\obj\Debug\netcoreapp2.0\Shop.Service.Api.csproj.CoreCompileInputs.cache
 D:\angular2\project\shopping\Shop.Service.Api\obj\Debug\netcoreapp2.0\Shop.Service.Api.AssemblyInfoInputs.cache
 D:\angular2\project\shopping\Shop.Service.Api\obj\Debug\netcoreapp2.0\Shop.Service.Api.AssemblyInfo.cs
