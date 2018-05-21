@@ -56,5 +56,7 @@ namespace Shop.DomainModel.Entities
         public string PhotoPath { get; set; }
 
         public decimal Salary { get; set; }
+
+        public ICollection<EmployeeTerritories> EmployeeTerritories { get; set; }
     }
 }

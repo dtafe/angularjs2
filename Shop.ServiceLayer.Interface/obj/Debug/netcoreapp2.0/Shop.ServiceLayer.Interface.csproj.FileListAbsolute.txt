@@ -1,6 +1,7 @@
 D:\angular2\project\shopping\Shop.ServiceLayer.Interface\bin\Debug\netcoreapp2.0\Shop.ServiceLayer.Interface.deps.json
 D:\angular2\project\shopping\Shop.ServiceLayer.Interface\bin\Debug\netcoreapp2.0\Shop.ServiceLayer.Interface.dll
 D:\angular2\project\shopping\Shop.ServiceLayer.Interface\bin\Debug\netcoreapp2.0\Shop.ServiceLayer.Interface.pdb
+D:\angular2\project\shopping\Shop.ServiceLayer.Interface\obj\Debug\netcoreapp2.0\Shop.ServiceLayer.Interface.csprojResolveAssemblyReference.cache
 D:\angular2\project\shopping\Shop.ServiceLayer.Interface\obj\Debug\netcoreapp2.0\Shop.ServiceLayer.Interface.csproj.CoreCompileInputs.cache
 D:\angular2\project\shopping\Shop.ServiceLayer.Interface\obj\Debug\netcoreapp2.0\Shop.ServiceLayer.Interface.AssemblyInfoInputs.cache
 D:\angular2\project\shopping\Shop.ServiceLayer.Interface\obj\Debug\netcoreapp2.0\Shop.ServiceLayer.Interface.AssemblyInfo.cs

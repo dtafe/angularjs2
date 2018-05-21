@@ -21,6 +21,7 @@ namespace Shop.DomainModel.Entities
         public GenderEnumType Gender { get; set; }
 
         public ICollection<Order> Orders { get; set; }
+        public ICollection<CustomerCustomerDemoGraphics> CustomerCustomerDemoGraphics { get; set; }
     }
 
     public enum GenderEnumType

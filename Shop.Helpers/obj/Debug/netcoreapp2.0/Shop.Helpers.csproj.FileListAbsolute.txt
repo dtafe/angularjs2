@@ -1,6 +1,7 @@
 D:\angular2\project\shopping\Shop.Helpers\bin\Debug\netcoreapp2.0\Shop.Helpers.deps.json
 D:\angular2\project\shopping\Shop.Helpers\bin\Debug\netcoreapp2.0\Shop.Helpers.dll
 D:\angular2\project\shopping\Shop.Helpers\bin\Debug\netcoreapp2.0\Shop.Helpers.pdb
+D:\angular2\project\shopping\Shop.Helpers\obj\Debug\netcoreapp2.0\Shop.Helpers.csprojResolveAssemblyReference.cache
 D:\angular2\project\shopping\Shop.Helpers\obj\Debug\netcoreapp2.0\Shop.Helpers.csproj.CoreCompileInputs.cache
 D:\angular2\project\shopping\Shop.Helpers\obj\Debug\netcoreapp2.0\Shop.Helpers.AssemblyInfoInputs.cache
 D:\angular2\project\shopping\Shop.Helpers\obj\Debug\netcoreapp2.0\Shop.Helpers.AssemblyInfo.cs

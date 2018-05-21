@@ -11,8 +11,8 @@ using System;
 namespace Shop.Web.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20180521051236_EntityUpdate")]
-    partial class EntityUpdate
+    [Migration("20180521095411_EntitiesUpdate")]
+    partial class EntitiesUpdate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -292,6 +292,59 @@ namespace Shop.Web.Migrations
                     b.ToTable("Customers");
                 });
 
+            modelBuilder.Entity("Shop.DomainModel.Entities.CustomerCustomerDemoGraphics", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<int>("CreatedById");
+
+                    b.Property<int>("CreatedOn");
+
+                    b.Property<int?>("CustomerDemoGraphicId");
+
+                    b.Property<int>("CustomerId");
+
+                    b.Property<int>("CustomerTypeId");
+
+                    b.Property<bool?>("IsDeleted");
+
+                    b.Property<int>("LastModified");
+
+                    b.Property<int>("ModifiedOn");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CustomerDemoGraphicId");
+
+                    b.HasIndex("CustomerId");
+
+                    b.ToTable("CustomerCustomerDemoGraphics");
+                });
+
+            modelBuilder.Entity("Shop.DomainModel.Entities.CustomerDemoGraphic", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<int>("CreatedById");
+
+                    b.Property<int>("CreatedOn");
+
+                    b.Property<string>("Description")
+                        .HasMaxLength(128);
+
+                    b.Property<bool?>("IsDeleted");
+
+                    b.Property<int>("LastModified");
+
+                    b.Property<int>("ModifiedOn");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("CustomerDemoGraphics");
+                });
+
             modelBuilder.Entity("Shop.DomainModel.Entities.Employee", b =>
                 {
                     b.Property<int>("Id")
@@ -360,6 +413,34 @@ namespace Shop.Web.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Employees");
+                });
+
+            modelBuilder.Entity("Shop.DomainModel.Entities.EmployeeTerritories", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<int>("CreatedById");
+
+                    b.Property<int>("CreatedOn");
+
+                    b.Property<int>("EmployeeId");
+
+                    b.Property<bool?>("IsDeleted");
+
+                    b.Property<int>("LastModified");
+
+                    b.Property<int>("ModifiedOn");
+
+                    b.Property<int>("TerritoryId");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("EmployeeId");
+
+                    b.HasIndex("TerritoryId");
+
+                    b.ToTable("EmployeeTerritories");
                 });
 
             modelBuilder.Entity("Shop.DomainModel.Entities.Order", b =>
@@ -493,6 +574,29 @@ namespace Shop.Web.Migrations
                     b.ToTable("Products");
                 });
 
+            modelBuilder.Entity("Shop.DomainModel.Entities.Region", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<int>("CreatedById");
+
+                    b.Property<int>("CreatedOn");
+
+                    b.Property<string>("Description")
+                        .HasMaxLength(64);
+
+                    b.Property<bool?>("IsDeleted");
+
+                    b.Property<int>("LastModified");
+
+                    b.Property<int>("ModifiedOn");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Regions");
+                });
+
             modelBuilder.Entity("Shop.DomainModel.Entities.Shipper", b =>
                 {
                     b.Property<int>("Id")
@@ -571,6 +675,33 @@ namespace Shop.Web.Migrations
                     b.ToTable("Suppliers");
                 });
 
+            modelBuilder.Entity("Shop.DomainModel.Entities.Territory", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<int>("CreatedById");
+
+                    b.Property<int>("CreatedOn");
+
+                    b.Property<string>("Description")
+                        .HasMaxLength(128);
+
+                    b.Property<bool?>("IsDeleted");
+
+                    b.Property<int>("LastModified");
+
+                    b.Property<int>("ModifiedOn");
+
+                    b.Property<int>("RegionId");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("RegionId");
+
+                    b.ToTable("Territories");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
                 {
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole")
@@ -631,6 +762,31 @@ namespace Shop.Web.Migrations
                         .HasForeignKey("IdentityId");
                 });
 
+            modelBuilder.Entity("Shop.DomainModel.Entities.CustomerCustomerDemoGraphics", b =>
+                {
+                    b.HasOne("Shop.DomainModel.Entities.CustomerDemoGraphic", "CustomerDemoGraphic")
+                        .WithMany("CustomerCustomerDemoGraphics")
+                        .HasForeignKey("CustomerDemoGraphicId");
+
+                    b.HasOne("Shop.DomainModel.Entities.Customer", "Customer")
+                        .WithMany("CustomerCustomerDemoGraphics")
+                        .HasForeignKey("CustomerId")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("Shop.DomainModel.Entities.EmployeeTerritories", b =>
+                {
+                    b.HasOne("Shop.DomainModel.Entities.Employee", "Employee")
+                        .WithMany("EmployeeTerritories")
+                        .HasForeignKey("EmployeeId")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("Shop.DomainModel.Entities.Territory", "Territory")
+                        .WithMany("EmployeeTerritories")
+                        .HasForeignKey("TerritoryId")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
             modelBuilder.Entity("Shop.DomainModel.Entities.Order", b =>
                 {
                     b.HasOne("Shop.DomainModel.Entities.Country", "Country")
@@ -667,6 +823,14 @@ namespace Shop.Web.Migrations
                     b.HasOne("Shop.DomainModel.Entities.Supplier", "Supplier")
                         .WithMany("Products")
                         .HasForeignKey("SupplierId")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("Shop.DomainModel.Entities.Territory", b =>
+                {
+                    b.HasOne("Shop.DomainModel.Entities.Region", "Region")
+                        .WithMany("Territories")
+                        .HasForeignKey("RegionId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 #pragma warning restore 612, 618
