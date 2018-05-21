@@ -16,10 +16,12 @@ namespace Shop.DomainModel.Entities
         public string PictureUrl { get; set; }
         public string Avatar { get; set; }
         
-        public string Country { get; set; }
         public string State { get; set; }
         public string City { get; set; }
         public string ZipCode { get; set; }
         public string Address { get; set; }
+
+        public int CountryId { get; set; }
+        public virtual Country Country { get; set; }
     }
 }

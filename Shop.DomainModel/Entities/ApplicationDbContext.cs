@@ -17,5 +17,8 @@ namespace Shop.DomainModel.Entities
         public DbSet<Product> Products { get; set; }
         public DbSet<Order> Orders { get; set; }
         public DbSet<OrderDetail> OrderDetails { get; set; }
+        public DbSet<Country> Countries { get; set; }
+        public DbSet<Shipper> Shippers { get; set; }
+        public DbSet<Employee> Employees { get; set; }
     }
 }

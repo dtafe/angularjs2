@@ -11,8 +11,8 @@ using System;
 namespace Shop.Web.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20180510092103_EntitiesUpdate")]
-    partial class EntitiesUpdate
+    [Migration("20180521051236_EntityUpdate")]
+    partial class EntityUpdate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -145,7 +145,7 @@ namespace Shop.Web.Migrations
                     b.Property<string>("ConcurrencyStamp")
                         .IsConcurrencyToken();
 
-                    b.Property<string>("Country");
+                    b.Property<int>("CountryId");
 
                     b.Property<string>("Email")
                         .HasMaxLength(256);
@@ -195,6 +195,8 @@ namespace Shop.Web.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("CountryId");
+
                     b.HasIndex("NormalizedEmail")
                         .HasName("EmailIndex");
 
@@ -215,7 +217,8 @@ namespace Shop.Web.Migrations
 
                     b.Property<int>("CreatedOn");
 
-                    b.Property<string>("Description");
+                    b.Property<string>("Description")
+                        .HasMaxLength(256);
 
                     b.Property<bool?>("IsDeleted");
 
@@ -223,13 +226,38 @@ namespace Shop.Web.Migrations
 
                     b.Property<int>("ModifiedOn");
 
-                    b.Property<string>("Name");
+                    b.Property<string>("Name")
+                        .HasMaxLength(64);
 
-                    b.Property<string>("Picture");
+                    b.Property<string>("Picture")
+                        .HasMaxLength(2147483647);
 
                     b.HasKey("Id");
 
                     b.ToTable("Categories");
+                });
+
+            modelBuilder.Entity("Shop.DomainModel.Entities.Country", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<int>("CreatedById");
+
+                    b.Property<int>("CreatedOn");
+
+                    b.Property<bool?>("IsDeleted");
+
+                    b.Property<int>("LastModified");
+
+                    b.Property<int>("ModifiedOn");
+
+                    b.Property<string>("Name")
+                        .HasMaxLength(64);
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Countries");
                 });
 
             modelBuilder.Entity("Shop.DomainModel.Entities.Customer", b =>
@@ -241,7 +269,7 @@ namespace Shop.Web.Migrations
 
                     b.Property<int>("CreatedOn");
 
-                    b.Property<string>("Gender");
+                    b.Property<int>("Gender");
 
                     b.Property<string>("IdentityId");
 
@@ -249,9 +277,11 @@ namespace Shop.Web.Migrations
 
                     b.Property<int>("LastModified");
 
-                    b.Property<string>("Locale");
+                    b.Property<string>("Locale")
+                        .HasMaxLength(28);
 
-                    b.Property<string>("Location");
+                    b.Property<string>("Location")
+                        .HasMaxLength(28);
 
                     b.Property<int>("ModifiedOn");
 
@@ -262,16 +292,88 @@ namespace Shop.Web.Migrations
                     b.ToTable("Customers");
                 });
 
+            modelBuilder.Entity("Shop.DomainModel.Entities.Employee", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("Address")
+                        .HasMaxLength(256);
+
+                    b.Property<DateTime>("BirthDate");
+
+                    b.Property<string>("City")
+                        .HasMaxLength(28);
+
+                    b.Property<string>("Country");
+
+                    b.Property<int>("CreatedById");
+
+                    b.Property<int>("CreatedOn");
+
+                    b.Property<string>("Extension")
+                        .HasMaxLength(8);
+
+                    b.Property<string>("FirstName")
+                        .HasMaxLength(64);
+
+                    b.Property<DateTime>("HireDate");
+
+                    b.Property<string>("HomePhone")
+                        .HasMaxLength(16);
+
+                    b.Property<bool?>("IsDeleted");
+
+                    b.Property<int>("LastModified");
+
+                    b.Property<string>("LastName")
+                        .HasMaxLength(64);
+
+                    b.Property<int>("ModifiedOn");
+
+                    b.Property<string>("Notes")
+                        .HasMaxLength(1024);
+
+                    b.Property<string>("Photo")
+                        .HasMaxLength(2147483647);
+
+                    b.Property<string>("PhotoPath")
+                        .HasMaxLength(256);
+
+                    b.Property<string>("PostCode")
+                        .HasMaxLength(8);
+
+                    b.Property<string>("Region")
+                        .HasMaxLength(28);
+
+                    b.Property<string>("ReportsTo")
+                        .HasMaxLength(64);
+
+                    b.Property<decimal>("Salary");
+
+                    b.Property<string>("Title")
+                        .HasMaxLength(128);
+
+                    b.Property<string>("TitleOfCourtesy")
+                        .HasMaxLength(256);
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Employees");
+                });
+
             modelBuilder.Entity("Shop.DomainModel.Entities.Order", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<string>("Address");
+                    b.Property<string>("Address")
+                        .HasMaxLength(256);
 
-                    b.Property<string>("City");
+                    b.Property<string>("City")
+                        .HasMaxLength(28);
 
-                    b.Property<string>("Country");
+                    b.Property<int>("CountryId");
 
                     b.Property<int>("CreatedById");
 
@@ -289,19 +391,24 @@ namespace Shop.Web.Migrations
 
                     b.Property<DateTime>("OrderDate");
 
-                    b.Property<string>("Region");
+                    b.Property<string>("Region")
+                        .HasMaxLength(28);
 
                     b.Property<DateTime>("RequiredDate");
 
-                    b.Property<string>("ShipName");
+                    b.Property<string>("ShipName")
+                        .HasMaxLength(64);
 
                     b.Property<int>("ShipVia");
 
                     b.Property<DateTime>("ShippedDate");
 
-                    b.Property<string>("ZipCode");
+                    b.Property<string>("ZipCode")
+                        .HasMaxLength(8);
 
                     b.HasKey("Id");
+
+                    b.HasIndex("CountryId");
 
                     b.HasIndex("CustomerId");
 
@@ -361,9 +468,11 @@ namespace Shop.Web.Migrations
 
                     b.Property<int>("ModifiedOn");
 
-                    b.Property<string>("Name");
+                    b.Property<string>("Name")
+                        .HasMaxLength(64);
 
-                    b.Property<string>("QuantityPerUnit");
+                    b.Property<string>("QuantityPerUnit")
+                        .HasMaxLength(28);
 
                     b.Property<int>("ReorderLevel");
 
@@ -384,30 +493,17 @@ namespace Shop.Web.Migrations
                     b.ToTable("Products");
                 });
 
-            modelBuilder.Entity("Shop.DomainModel.Entities.Supplier", b =>
+            modelBuilder.Entity("Shop.DomainModel.Entities.Shipper", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<string>("Address");
-
-                    b.Property<string>("City");
-
-                    b.Property<string>("CompanyName");
-
-                    b.Property<string>("ContactName");
-
-                    b.Property<string>("ContactTitle");
-
-                    b.Property<string>("Country");
+                    b.Property<string>("CompanyName")
+                        .HasMaxLength(64);
 
                     b.Property<int>("CreatedById");
 
                     b.Property<int>("CreatedOn");
-
-                    b.Property<string>("Fax");
-
-                    b.Property<string>("HomePage");
 
                     b.Property<bool?>("IsDeleted");
 
@@ -415,11 +511,60 @@ namespace Shop.Web.Migrations
 
                     b.Property<int>("ModifiedOn");
 
-                    b.Property<string>("Phone");
+                    b.Property<string>("Phone")
+                        .HasMaxLength(16);
 
-                    b.Property<string>("Region");
+                    b.HasKey("Id");
 
-                    b.Property<string>("ZipCode");
+                    b.ToTable("Shippers");
+                });
+
+            modelBuilder.Entity("Shop.DomainModel.Entities.Supplier", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("Address")
+                        .HasMaxLength(256);
+
+                    b.Property<string>("City")
+                        .HasMaxLength(28);
+
+                    b.Property<string>("CompanyName")
+                        .HasMaxLength(64);
+
+                    b.Property<string>("ContactName")
+                        .HasMaxLength(64);
+
+                    b.Property<string>("ContactTitle")
+                        .HasMaxLength(256);
+
+                    b.Property<int>("Country");
+
+                    b.Property<int>("CreatedById");
+
+                    b.Property<int>("CreatedOn");
+
+                    b.Property<string>("Fax")
+                        .HasMaxLength(16);
+
+                    b.Property<string>("HomePage")
+                        .HasMaxLength(64);
+
+                    b.Property<bool?>("IsDeleted");
+
+                    b.Property<int>("LastModified");
+
+                    b.Property<int>("ModifiedOn");
+
+                    b.Property<string>("Phone")
+                        .HasMaxLength(16);
+
+                    b.Property<string>("Region")
+                        .HasMaxLength(28);
+
+                    b.Property<string>("ZipCode")
+                        .HasMaxLength(8);
 
                     b.HasKey("Id");
 
@@ -471,6 +616,14 @@ namespace Shop.Web.Migrations
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 
+            modelBuilder.Entity("Shop.DomainModel.Entities.AppUser", b =>
+                {
+                    b.HasOne("Shop.DomainModel.Entities.Country", "Country")
+                        .WithMany()
+                        .HasForeignKey("CountryId")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
             modelBuilder.Entity("Shop.DomainModel.Entities.Customer", b =>
                 {
                     b.HasOne("Shop.DomainModel.Entities.AppUser", "Identity")
@@ -480,6 +633,11 @@ namespace Shop.Web.Migrations
 
             modelBuilder.Entity("Shop.DomainModel.Entities.Order", b =>
                 {
+                    b.HasOne("Shop.DomainModel.Entities.Country", "Country")
+                        .WithMany()
+                        .HasForeignKey("CountryId")
+                        .OnDelete(DeleteBehavior.Cascade);
+
                     b.HasOne("Shop.DomainModel.Entities.Customer", "Customer")
                         .WithMany("Orders")
                         .HasForeignKey("CustomerId")

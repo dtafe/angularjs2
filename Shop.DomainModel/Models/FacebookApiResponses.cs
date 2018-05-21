@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using Shop.DomainModel.Entities;
 
 namespace Shop.DomainModel.Models
 {
@@ -13,7 +14,7 @@ namespace Shop.DomainModel.Models
             public string FirstName { get; set; }
             [JsonProperty("last_name")]
             public string LastName { get; set; }
-            public string Gender { get; set; }
+            public GenderEnumType Gender { get; set; }
             public string Locale { get; set; }
             public FacebookPictureData Picture { get; set; }
         }

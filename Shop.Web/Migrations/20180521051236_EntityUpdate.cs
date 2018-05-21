@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace Shop.Web.Migrations
 {
-    public partial class EntitiesUpdate : Migration
+    public partial class EntityUpdate : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
